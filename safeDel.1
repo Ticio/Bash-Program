@@ -1,0 +1,52 @@
+.TH SAFEDEL 1 "OCT 2019" Linux "User Manuals"
+.SH NAME
+SafeDel \- Command for deleting regular files to a special folder called .trashCan
+.SH SYNOPSIS
+.B ./safeDel.sh file [file ...]
+.SH DESCRIPTION
+.B SafeDel
+SafeDel is an alternative command for removing files which can be restored in the future.
+safeDel, removes one or more files by moving them to the user’s trash can directory. 
+It is both command line option driven and menu driven, and the functionality made available to a user using command line options or the
+menu will be the same.
+.BR xyzzy (1)
+linker to find them. The symdef entry is then compressed
+using the WBG (Whiz-Bang-Gizmo) algorithm.
+All files are processed in the order specified.
+.SH OPTIONS
+.IP -l
+output a list on screen of the contents of the trashCan directory; output should be
+properly formatted as “file name” (without path), “size” (in bytes) and “type” for
+each file (e.g. "safeDel.sh -l").
+.IP "-r [file]"
+recover i.e. get a specified file, from the trashCan directory and place it in the
+current directory
+.IP -d
+delete interactively the contents of the trashCan directory (e.g. "safeDel.sh -d").
+.IP -t
+display total usage in bytes of the trashCan directory for the user of the trashcan
+(e.g. "safeDel.sh –t")
+.IP -m
+start monitor script process (see requirements below e.g. "safeDel.sh –m")
+.IP -k
+kill current user’s monitor script processes (e.g. "safeDel.sh –k")
+.B -c
+option.
+.SH DIAGNOSTICS
+The following diagnostics may be issued on stderr:
+ 
+Bad magic number.
+.RS
+The input file does not look like an archive file.
+.RE
+Old style baz segments.
+.RS
+.B foo
+can only handle new style baz segments. COBOL
+object libraries are not supported in this version.
+.SH BUGS
+Combining getopts with files may generate few bugs
+.SH AUTHOR
+Ticio Torcato Fortuna Victoriano
+.SH "SEE ALSO"
+.BR rm (1),

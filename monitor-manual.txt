@@ -1,0 +1,31 @@
+SAFEDEL(1)                       User Manuals                       SAFEDEL(1)
+
+
+
+NNAAMMEE
+       Monitor - Command for deleting regular files to a special folder called
+       .trashCan
+
+SSYYNNOOPPSSIISS
+       ..//ssaaffeeDDeell..sshh --mm
+
+DDEESSCCRRIIPPTTIIOONN
+       MMoonniittoorr It monitors changes in the trashCan folder xxyyzzzzyy(1)  linker  to
+       find  them.  The  symdef  entry is then compressed using the WBG (Whiz-
+       Bang-Gizmo) algorithm.  All files are processed in the order specified.
+
+OOPPTTIIOONNSS
+       none
+
+BBUUGGSS
+       Combining it with arguments may generate few bugs
+
+AAUUTTHHOORR
+       Ticio Torcato Fortuna Victoriano
+
+SSEEEE AALLSSOO
+       iinnoottiiffyy--ttooooll(1),
+
+
+
+Linux                              OCT 2019                         SAFEDEL(1)

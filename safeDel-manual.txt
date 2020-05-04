@@ -1,0 +1,64 @@
+SAFEDEL(1)                       User Manuals                       SAFEDEL(1)
+
+
+
+NNAAMMEE
+       SafeDel - Command for deleting regular files to a special folder called
+       .trashCan
+
+SSYYNNOOPPSSIISS
+       ..//ssaaffeeDDeell..sshh ffiillee [[ffiillee ......]]
+
+DDEESSCCRRIIPPTTIIOONN
+       SSaaffeeDDeell SafeDel is an alternative command for removing files which  can
+       be  restored in the future.  safeDel, removes one or more files by mov-
+       ing them to the users trash can directory.  It  is  both  command  line
+       option  driven and menu driven, and the functionality made available to
+       a user using command line  options  or  the  menu  will  be  the  same.
+       xxyyzzzzyy(1) linker to find them. The symdef entry is then compressed using
+       the WBG (Whiz-Bang-Gizmo) algorithm.  All files are  processed  in  the
+       order specified.
+
+OOPPTTIIOONNSS
+       -l     output  a  list on screen of the contents of the trashCan direc-
+              tory; output should be properly formatted as file name  (without
+              path),  size (in bytes) and type for each file (e.g. "safeDel.sh
+              -l").
+
+       -r [file]
+              recover i.e. get a specified file, from the  trashCan  directory
+              and place it in the current directory
+
+       -d     delete  interactively  the  contents  of  the trashCan directory
+              (e.g. "safeDel.sh -d").
+
+       -t     display total usage in bytes of the trashCan directory  for  the
+              user of the trashcan (e.g. "safeDel.sh t")
+
+       -m     start  monitor  script  process  (see  requirements  below  e.g.
+              "safeDel.sh m")
+
+       -k     kill current users monitor script  processes  (e.g.  "safeDel.sh
+              k") --cc option.
+
+DDIIAAGGNNOOSSTTIICCSS
+       The following diagnostics may be issued on stderr:
+
+       Bad magic number.
+              The input file does not look like an archive file.
+       Old style baz segments.
+              ffoooo  can  only  handle  new  style  baz  segments.  COBOL object
+              libraries are not supported in this version.
+
+BBUUGGSS
+       Combining getopts with files may generate few bugs
+
+AAUUTTHHOORR
+       Ticio Torcato Fortuna Victoriano
+
+SSEEEE AALLSSOO
+       rrmm(1),
+
+
+
+Linux                              OCT 2019                         SAFEDEL(1)
